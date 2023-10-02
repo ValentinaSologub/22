@@ -5,29 +5,49 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-    internal class Address
+   
+    class Address
     {
-        public string index;
-        public string country;
-        public string city;
-        public string street;
-        public string house;
-        public string apartment;
+        private string country;
+        private string city;
+        private int index;
+        private int house;
+        private int apartment;
 
-        public string GetCountry() { return country; }
-        public void SetCountry(string country) { this.country = country; }
-        public string GetCity() { return city; }
-        public void SetCity(string city) { this.city = city; }
-        public string GetIndex() { return index; }
-        public void SetIndex(string index) { this.index = index; }
-        public string GetHouse() { return house; }
-        public void SetHouse(string house) { this.house = house; }
-        public string GetApartament() { return apartment; }
-        public void SetApartament(string apartment) { this.apartment = apartment; }
-        public override string ToString()
+        public string City
         {
-            return $"{index},{country},{city},{street},{house},{apartment}";
+            get { return city; }
+            set { city = value; }
         }
 
+        public int Index
+        {
+            get { return index; }
+            set { index = value; }
+        }
+
+        public int House
+        {
+            get { return house; }
+            set { house = value; }
+        }
+
+        public int Apartment
+        {
+            get { return apartment; }
+            set { apartment = value; }
+        }
+
+        public string Country
+        {
+            get { return country; }
+            set { country = value; }
+        }
+
+        public override string ToString()
+        {
+            return $"{index}, {country}, {city}, {house}, {apartment}";
+        }
     }
+    
 
